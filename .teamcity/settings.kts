@@ -45,6 +45,10 @@ project {
     buildType(BuildB)
     buildType(BuildA)
     buildTypesOrder = arrayListOf(BuildA, BuildB, BuildC, BuildD, BbBuildA)
+
+    params {
+        param("teamcity.​vcsTrigger.​runBuildInNewEmptyBranch","true")
+    }
 }
 
 object BbBuildA : BuildType({
