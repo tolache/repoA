@@ -37,7 +37,6 @@ project {
     vcsRoot(BbrepoA)
     vcsRoot(RepoB)
     vcsRoot(RepoC)
-    vcsRoot(RepoD)
 
     buildType(BuildD)
     buildType(BbBuildA)
@@ -279,16 +278,6 @@ object RepoC : GitVcsRoot({
     name = "repoC"
     url = "https://github.com/tolache/repoC"
     branchSpec = "+:refs/heads/(master)"
-    authMethod = password {
-        userName = "tolache"
-        password = "credentialsJSON:7d8cca8e-bc35-4156-a965-0b32123691bc"
-    }
-})
-
-object RepoD : GitVcsRoot({
-    name = "repoD"
-    url = "https://github.com/tolache/repoD"
-    branchSpec = "refs/heads/develop"
     authMethod = password {
         userName = "tolache"
         password = "credentialsJSON:7d8cca8e-bc35-4156-a965-0b32123691bc"
