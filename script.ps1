@@ -1,2 +1,3 @@
 param ([string] $MyParam = "")
-Write-Output "You've specified: $MyParam."
+$x = $MyParam.Replace("``n", "`n")
+Write-Output "You've specified:`n===START===`n$x`n====END===="
