@@ -1,4 +1,11 @@
-param ([string] $param1 = "")
-#Write-Output "param1: $param1"
-$x = $param1.Replace("``n", "`n")
-Write-Output "param1:$x"
+function Send-Keys
+{
+	notepad
+	$wshell = New-Object -ComObject wscript.shell;
+	$wshell.AppActivate('Notepad')
+	Sleep 1
+	$wshell.SendKeys('+2')
+	Sleep 1
+	$wshell.SendKeys('~')
+}
+Send-Keys
