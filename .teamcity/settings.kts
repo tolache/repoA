@@ -47,7 +47,7 @@ project {
     buildType(BbBuildA)
     buildType(BuildC)
     buildType(BuildB)
-//     buildType(BuildA)
+    buildType(BuildA)
 
     template(BuildATemplate)
 
