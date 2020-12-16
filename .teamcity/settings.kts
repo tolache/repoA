@@ -47,7 +47,7 @@ project {
     buildType(BbBuildA)
     buildType(BuildC)
     buildType(BuildB)
-    buildType(BuildA)
+    buildType(BuildA2)
 
     template(BuildATemplate)
 
@@ -114,7 +114,7 @@ project {
             param("active.storage.feature.id", "PROJECT_EXT_30")
         }
     }
-    buildTypesOrder = arrayListOf(BuildA, BuildB, BuildC, BuildD, BbBuildA)
+    buildTypesOrder = arrayListOf(BuildA2, BuildB, BuildC, BuildD, BbBuildA)
 }
 
 object BbBuildA : BuildType({
@@ -141,7 +141,7 @@ object BbBuildA : BuildType({
     }
 })
 
-object BuildA : BuildType({
+object BuildA2 : BuildType({
     name = "Build A"
 
     artifactRules = "Build_A_*.txt"
@@ -249,7 +249,7 @@ object BuildB : BuildType({
         }
         finishBuildTrigger {
             enabled = false
-            buildType = "${BuildA.id}"
+            buildType = "${BuildA2.id}"
             branchFilter = "+:*"
         }
     }
@@ -261,7 +261,7 @@ object BuildB : BuildType({
     }
 
     dependencies {
-        snapshot(BuildA) {
+        snapshot(BuildA2) {
             synchronizeRevisions = false
         }
     }
