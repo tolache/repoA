@@ -108,11 +108,6 @@ project {
             title = "Tola's Custom Report 1"
             startPage = "report.zip!/report1.htm"
         }
-        feature {
-            id = "PROJECT_EXT_32"
-            type = "active_storage"
-            param("active.storage.feature.id", "PROJECT_EXT_30")
-        }
     }
     buildTypesOrder = arrayListOf(BuildA, BuildB, BuildC, BuildD, BbBuildA)
 }
