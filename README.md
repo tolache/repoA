@@ -1,2 +1,2 @@
 # repoA
-master
+develop
